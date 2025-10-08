@@ -1,0 +1,22 @@
+if len(result) > 0:
+            res =make_response({'payload':result}, 200)
+            res.headers['Access-Control-Allow-Origin'] = "*" 
+            return res
+
+
+
+*****
+#user_controller.py code 
+@app.route("/user/patch/<id>", methods= ['PATCH'])
+def user_patch_controller(id):
+    return obj.user_patch_model(request.form, id)
+
+
+*****
+#user_model.py
+def user_patch_model(self, data, id):
+        qry = "UPDATE users SET "
+        for key in data:
+            qry = qry + f"{key}={data[key]}"
+        #query = UPDATE users SET col=vol , col=vol WHERE id={id}
+        return "This is user patch model" 

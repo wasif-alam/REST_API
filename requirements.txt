@@ -1,0 +1,9 @@
+Flask==2.0.3
+Werkzeug==2.0.3
+mysql-connector-python==8.0.28
+PyJWT
+
+python -m venv venv(createing new file name!)
+.\venv\Scripts\activate
+$env:FLASK_APP = "app"; $env:FLASK_APP="development"; $env:PYTHONDONTWRITEBYTECODE=1
+

@@ -1,0 +1,5 @@
+#Limit Method 
+SELECT * FROM user LIMIT 45 , 10
+/user/getall/limit/5/page/10
+start = (page*limit)-limit
+        (10*5)-5
