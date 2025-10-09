@@ -2,3 +2,6 @@
 2- Saving file into the filesystem with unique filename
 3- Updating filepath in database with respective entity
 4- Creating an endpoint to read the file 
+
+1,2,3 is relate to same query .
+but 4 is different.
