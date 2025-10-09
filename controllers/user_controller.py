@@ -29,4 +29,4 @@ def user_pagination_controller(limit,page):
 
 @app.route("/user/<uid>/upload/avater", methods=['PUT'])
 def user_upload_avater_controller(uid):
-    return "This is user_upload_avater_controller!"
+    return obj.user_upload_avater_model(uid)
