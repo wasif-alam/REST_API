@@ -26,3 +26,7 @@ def user_patch_controller(id):
 @app.route("/user/getall/limit/<limit>/page/<page>", methods= ['GET'])
 def user_pagination_controller(limit,page):
     return obj.user_pagination_model(limit,page)
+
+@app.route("/user/<uid>/upload/avater", methods=['PUT'])
+def user_upload_avater_controller(uid):
+    return "This is user_upload_avater_controller!"
