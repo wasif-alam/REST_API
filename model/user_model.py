@@ -67,4 +67,9 @@ class user_model():
             return make_response({'payload': result, "page_no":page, "limit":limit}, 200)
         else:
             return make_response({'message': 'No data found!'}, 204)
-
+    def user_upload_avater_model(self, uid, filePath):
+        self.cur.execute(f"UPDATE users SET avater='{filePath}' WHERE id={uid}")
+        if self.cur.rowcount>0:
+            return make_response({"massage":"User FILE_UPLOADED successfully!"}, 201)
+        else:
+            return make_response({"massage":"Nothing to update!"}, 202)

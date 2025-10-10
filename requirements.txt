@@ -5,5 +5,5 @@ PyJWT
 
 python -m venv venv(createing new file name!)
 .\venv\Scripts\activate
-$env:FLASK_APP = "app"; $env:FLASK_APP="development"; $env:PYTHONDONTWRITEBYTECODE=1
+$env:FLASK_APP = "app"; $env:FLASK_APP="production"; $env:PYTHONDONTWRITEBYTECODE=1
 
