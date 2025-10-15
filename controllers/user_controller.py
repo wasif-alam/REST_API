@@ -34,6 +34,10 @@ def user_upload_avater_controller(uid):
     uniqueFileName = str(datetime.now().timestamp()).replace(".", "")
     FileNameSplit = file.filename.split(".")
     ext = FileNameSplit[len(FileNameSplit)-1]
-    finalPath = f"uploads/{uniqueFileName}.{ext}"
-    file.save(finalPath)
-    return obj.user_upload_avater_model(uid,finalPath)
+    finalFilePath = f"uploads/{uniqueFileName}.{ext}"
+    file.save(finalFilePath)
+    return obj.user_upload_avater_model(uid,finalFilePath)
+
+@app.route("/uploads/<filename>")
+def user_getavater_controller(filename):
+    return send_file(f"uploads/{filename}")
