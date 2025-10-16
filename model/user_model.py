@@ -45,11 +45,8 @@ class user_model():
         qry = "UPDATE users SET "
         for key in data:
             qry += f"{key}='{data[key]}',"
-
         qry = qry[:-1] + f" WHERE id={id}"
-        
         self.cur.execute(qry)
-
         if self.cur.rowcount>0:
             return make_response({"massage":"User Updated successfully!"}, 201)
         else:
